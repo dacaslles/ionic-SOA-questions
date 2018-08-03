@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { DatabaseProvider } from '../providers/database/database';
 
 import { SQLite } from '@ionic-native/sqlite';
+import { SQLitePorter } from '@ionic-native/sqlite-porter';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SQLite } from '@ionic-native/sqlite';
     StatusBar,
     SplashScreen,
     SQLite,
+    SQLitePorter,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DatabaseProvider
   ]

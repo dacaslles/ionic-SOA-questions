@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      SA Questions
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  
+  <button ion-button block color="primary" (click)="import()">Import data</button>
+  
+  <ion-list *ngIf="hasData">
+    <ion-card padding *ngFor="let question of questions">
+      <h2>{{question.text}}</h2>
+      <p>{{question.A}}</p>
+    </ion-card>
+  </ion-list>
 </ion-content>
